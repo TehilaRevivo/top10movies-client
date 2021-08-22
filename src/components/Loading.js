@@ -2,9 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Loader from "react-loader-spinner";
 
-import './movie.style'
-
-const Loading = (props) => {
+const Loading = () => {
     return (
         <>
             <div id="loading" className="d-flex">

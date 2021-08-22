@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { Card, Button, Form, Row, Col } from 'react-bootstrap'
+import { Card, Button, Form, Row } from 'react-bootstrap'
 import { actions } from '../redux/action/action'
 import { useHistory } from 'react-router-dom'
 import ModalForm from './ModalForm'
 import { types } from '../movieTypes'
-import './movie.style'
 import { Rating } from '@material-ui/lab'
 
 

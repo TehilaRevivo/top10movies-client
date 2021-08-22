@@ -6,11 +6,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
 import { actions } from '../redux/action/action';
 import './style.css'
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import {  Navbar } from 'react-bootstrap';
 import Loading from './Loading';
 
 const AppMovies = (props) => {
@@ -31,7 +30,7 @@ const AppMovies = (props) => {
             {movie.loading && <Loading />}
             <Router>
                 <Switch>
-                    <Route path="/Movies" >
+                    <Route path="/"  exact>
                         <Movies {...props} showModal={showModal} setShowModal={setShowModal} />
                     </Route>
                     <Route path="/EditMovie/:idMovie" >

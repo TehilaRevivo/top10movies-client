@@ -23,7 +23,6 @@ const EditMovie = (props) => {
             let index = movie.movies.findIndex(m => m._id === idMovie)
             setIndexMovie(index)
             setDetailsMovie(movie.movies[index])
-            console.log(index);
         }
     }, [movie.movies])
 
@@ -76,7 +75,7 @@ const EditMovie = (props) => {
                                 <Rating name="half-rating-read" value={movie.movies[indexMovie].rating} precision={0.5} readOnly />
                             </p>
                         </div>
-                        <Link to='/Movies' className="btn btn-primary">Return to all movies</Link>
+                        <Link to='/' className="btn btn-primary">Return to all movies</Link>
                     </div>
 
                    <ModalRemove showModalRemove={showModalRemove} handleClose={handleClose} remove={remove}/>
@@ -97,13 +96,10 @@ const EditMovie = (props) => {
     )
 }
 
-const mapStateToProps = (state) => ({
-
-})
 
 const mapDispatchToProps = (dispatch) => ({
     removeMovie: (data) => dispatch(actions.removeMovie(data)),
     editMovie: (data) => dispatch(actions.editMovie(data))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditMovie)
+export default connect(undefined, mapDispatchToProps)(EditMovie)
