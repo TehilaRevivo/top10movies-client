@@ -1,7 +1,8 @@
-const types = [
-    'Action',
+export const types = [
+    '',
+    'action',
     'science fiction',
-    'suspense',
+    'Thriller',
     'comedy',
     'drama'
 ]
